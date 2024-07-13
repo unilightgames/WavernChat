@@ -20,6 +20,7 @@ public class Client {
             // If an error occurred, the server will "closeEverything" in this order:
             // Reader (Displays messages), Writer (Sends), socket (server)
             closeEverything(bufferedReader, bufferedWriter, socket);
+            e.printStackTrace();
         }
     }
 // If a user sends a message
@@ -39,6 +40,7 @@ public class Client {
             bufferedWriter.write(username + ": " + messageToSend);
             // New line
             bufferedWriter.newLine();
+            System.out.println("Message sent!");
             // Refresh
             bufferedWriter.flush();
         }
@@ -59,9 +61,11 @@ public class Client {
                     msgFromGroupChat = bufferedReader.readLine();
                     // Prints it so everyone can see the message.
                     System.out.println(msgFromGroupChat);
+
                     // If an error occurred, the server will "closeEverything" in this order:
                 } catch (IOException e) {
                      closeEverything(bufferedReader, bufferedWriter, socket);
+                    System.out.println("Disconnected due to error.");
                 }
             }
             }
@@ -80,7 +84,7 @@ public class Client {
                 socket.close();
             }
         } catch (IOException e) {
-            e.printStackTrace();
+            System.out.println("Disconnected due to error.");
         }
     }
 
@@ -89,6 +93,7 @@ public class Client {
         // Login system
         System.out.println("Please enter your username: ");
         String username = scanner.nextLine();
+        System.out.println("SERVER: You have connected to the server successfully!");
         // Joins the server
         // NOTE: IF YOU WANT TO JOIN SOMEONE ELSE'S SERVER, ASK THEM FOR THE SERVER IP AND PORT. REPLACE "localhost"
         // AND "1234" WITH THE SERVER IP AND PORT GIVEN TO YOU
