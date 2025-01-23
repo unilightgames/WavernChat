@@ -16,7 +16,7 @@ p {
     font-size: 1.5em;
 }
 a {
-    background: #ffcc00;
+    background: #000000;
     padding: 10px 20px;
     border-radius: 5px;
     text-decoration: none;
@@ -25,7 +25,7 @@ a {
     transition: background 0.3s ease;
 }
 a:hover {
-    background: #ff9900;
+    background: #FFFFFF;
 }
 @keyframes fadeIn {
     from { opacity: 0; }
