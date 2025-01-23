@@ -1,0 +1,33 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #0f2027; /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #2c5364, #203a43, #0f2027); 
+    background: linear-gradient(to right, #2c5364, #203a43, #0f2027); 
+    color: white;
+    margin: 0;
+    padding: 0;
+}
+h1 {
+    font-size: 4em;
+    margin: 20px 0;
+    animation: fadeIn 2s;
+}
+p {
+    font-size: 1.5em;
+}
+a {
+    background: #ffcc00;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    transition: background 0.3s ease;
+}
+a:hover {
+    background: #ff9900;
+}
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
